@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        טיים פור צ'יינג' בע"מ
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            margin-left: 3vw;
+            margin-right: 3vw;
+            font-family: Arial, Helvetica, sans-serif;
+            direction: rtl;
+            overflow-y:scroll;
+        }
+
+        #divMenu {
+            position: sticky;
+            z-index: 10;
+            top: 0;
+            background-color: black;
+            width: 100%;
+            overflow: hidden;
+        }
+
+            #divMenu a {
+                float: right;
+                color: whitesmoke;
+                text-align: center;
+                padding: 7px 18px;
+                text-decoration: none;
+                font-size: 25px;
+            }
+
+                #divMenu a:hover {
+                    background-color: silver;
+                    color: black;
+                }
+
+        #PhoneNum {
+            color:cornflowerblue !important;
+            border-right: dashed;
+        }
+
+        #divPic {
+            position: relative;
+            background-image: url("bg4.jpeg");
+            height: 200px;
+            overflow: hidden;
+        }
+
+        #logo {
+            position: absolute;
+            right: 20px;
+            top: 5px;
+            height: 190px;
+            width: 190px;
+        }
+
+
+        #divContent {
+            position: relative;
+            background-color: floralwhite;
+            overflow: hidden;
+            min-height: 640px;
+        }
+
+        #divFooter {
+            background-color: lightsteelblue;
+            overflow: hidden;
+            width: 100%;
+            min-height:65px;
+        }
+
+        #divHome {
+            position: absolute;
+            right: 60px;
+            color: forestgreen;
+            font-size: 23px;
+            text-align: right;
+        }
+
+        #divAbout {
+            color: forestgreen;
+            font-size: 23px;
+        }
+
+        #divServices {
+            color: forestgreen;
+            font-size: 23px;
+        }
+
+        #divBranches h1 {
+            color: forestgreen;
+        }
+
+        #divContact {
+            position: absolute;
+            right: 60px;
+            color: forestgreen;
+            font-size: 23px;
+            text-align: right;
+        }
+
+
+
+        .box {
+            position: relative;
+            background-color: gainsboro;
+            margin: 7px;
+            padding: 7px;
+            width: 280px;
+            text-align: center;
+            border-radius: 7px;
+        }
+    </style>
+    <script>
+        let a1, a2, a3, a4, a5;
+        let divHome, divServices, divBranches, divAbout, divContact;
+
+        function init() {
+            divHome = document.getElementById("divHome");
+            divServices = document.getElementById("divServices");
+            divBranches = document.getElementById("divBranches");
+            divAbout = document.getElementById("divAbout");
+            divContact = document.getElementById("divContact");
+
+            a1 = document.getElementById("a1");
+            a2 = document.getElementById("a2");
+            a3 = document.getElementById("a3");
+            a4 = document.getElementById("a4");
+            a5 = document.getElementById("a5");
+
+            divHome.style.display = "block";
+        }
+
+        function menuSelect(div, a) {
+            hideAll();
+            if (div.style.display = "none")
+                div.style.display = "block";
+
+        }
+        function hideAll() {
+            divHome.style.display = "none";
+            divServices.style.display = "none";
+            divBranches.style.display = "none";
+            divAbout.style.display = "none";
+            divContact.style.display = "none";
+        }
+
+
+
+    </script>
+</head>
+<body onload="init()">
+
+    <div id="divMenu">
+        <a id="a1" onclick="menuSelect(divHome,a1)" href="#Home">דף הבית</a>
+        <a id="a2" onclick="menuSelect(divAbout,a2)" href="#About">אודות</a>
+        <a id="a3" onclick="menuSelect(divServices,a3)" href="#Services">שירותי מט"ח</a>
+        <a id="a4" onclick="menuSelect(divBranches,a4)" href="#Branches">סניפים</a>
+        <a id="a5" onclick="menuSelect(divContact,a5)" href="#Contact">צרו קשר</a>
+        <a id="PhoneNum" href="tel:08-6994792">08-6994792</a>
+    </div>
+    <div id="divPic">
+        <img id="logo" src="logo2.png" onclick="menuSelect(divHome,a1)" style="cursor:pointer" />
+    </div>
+    <div id="divContent">
+        <div id="divHome" style="display: none">
+
+            <embed src="list.html" style="text-overflow:clip" />
+
+            
+        </div>
+        <div id="divServices" style="display: none">
+            <center>
+                <h2>שירותי מט"ח</h2>
+                <p>המרת מט"ח בשער נמוך וללא עמלות.</p>
+                <p>שקלים למט"ח / מט"ח לשקלים / מט"ח למט"ח.</p>
+                <p>מכבדים מזומן, העברה בנקאית או כרטיס אשראי מכל סוג למעט דיינרס ואמריקן אקספרס.</p>
+                <h2>המחאות/צ'קים דולריים</h2>
+                <p>לא תלוי סכום.</p>
+                <p>פריטה במקום.</p>
+                <p>תשלום במזומן או בהעברה בנקאית.</p>
+                <h2>העברות כספים לחו"ל</h2>
+                <p>העברה לחו"ל וקבלה מח"ול.</p>
+                <p>ההעברות מתבצעות מיידית ודרך המרשתת.</p>
+                <p>ההעברות תתבצענה בכפוף לחוק, לרגולציות המשתנות מעת לעת ולתנאי חברת המשלוח.</p>
+                <div class="box">
+                    <p>מטבעות</p>
+                    <p>מומלץ להתקשר לבדוק  את זמינות הסכום הרצוי</p>
+                    <ul style="text-align:right">
+                        <li>שקל</li>
+                        <li>יורו</li>
+                        <li>דולר אמריקאי</li>
+                        <li>דולר קנדי</li>
+                        <li>דולר אוסטרלי</li>
+                        <li>פרנק שוויצרי</li>
+                        <li>רובל רוסי</li>
+                        <li>זלוטי פולני</li>
+                        <li>כתר צ'כי</li>
+                        <li>ליי רומני</li>
+                        <li>פורינט הונגרי</li>
+                        <li>כתר שוודי</li>
+                        <li>כתר נורווגי</li>
+                        <li>כתר דני - דנמרק</li>
+                        <li>יין יפני</li>
+                        <li>יואן סיני</li>
+                        <li>ראנד דרום אפריקאי</li>
+                    </ul>
+                    <p>ייתכנו מטבעות נוספים, מומלץ להתקשר ולברר</p>
+                </div>
+
+            </center>
+        </div>
+        <div id="divBranches" style="display: none">
+            <center>
+                <h1>סניפים</h1>
+                <div class="box">
+                    <h3>חשמונאים - סניף ראשי</h3>
+                    <p>כתובת: היצהר 2 חשמונאים</p>
+                    <p>טלפון: <a href="tel:08-6994792">08-6994792</a></p>
+                    <p>דוא"ל: <a href="mailto:Tfchashmo@bezeqint.net">Tfchashmo@bezeqint.net</a></p>
+                    <p>שעות פתיחה: א'-ה' 17:00-09:00</p>
+                    <p> ו' 12:00-09:00</p>
+                </div>
+
+                <div class="box">
+                    <h3>מודיעין</h3>
+                    <p>כתובת: לב העיר 2 - קניון עזריאלי</p>
+                    <p>טלפון: <a href="tel:08-9704895">08-9704895</a></p>
+                    <p>דוא"ל: <a href="mailto:Tfchashmo@bezeqint.net">Tfchashmo@bezeqint.net</a></p>
+                    <p>שעות פתיחה: א'-ה' 19:00-09:00</p>
+                    <p>ו' 13:00-09:00</p>
+                </div>
+                <div class="box">
+                    <h3>שהם</h3>
+                    <p>כתובת: עמק איילון 30</p>
+                    <p>טלפון: <a href="tel:03-7168045">03-7168045</a></p>
+                    <p>דוא"ל: <a href="mailto:Tfchashmo@bezeqint.net">Tfchashmo@bezeqint.net</a></p>
+                    <p>שעות פתיחה: א'-ה' 19:00-08:15</p>
+                    <p>ו' 13:00-09:00</p>
+                </div>
+                <div class="box">
+                    <h3>כפר גנים - פתח תקווה</h3>
+                    <p>כתובת: העצמאות 65 - מרכז מסחרי</p>
+                    <p>טלפון: <a href="tel:03-6005132">03-6005132  </a></p>
+                    <p>דוא"ל: <a href="mailto:Tfchashmo@bezeqint.net">Tfchashmo@bezeqint.net</a></p>
+                    <p>שעות פתיחה: א'-ה' 19:00-09:00    </p>
+                    <p>ו' 13:00-09:00</p>
+                </div>
+                <div class="box"><h3>יהוד - סגור עקב הקורונה ועד להודעה חדשה</h3></div>
+                <div class="box"><h3>גבעת שמואל - סגור עקב הקורונה ועד להודעה חדשה</h3></div>
+                <div class="box"><h3>רעננה - סגור עקב הקורונה ועד להודעה חדשה</h3></div>
+                <div class="box"><h3>תל אביב - סגור עד להודעה חדשה</h3></div>
+            </center>
+        </div>
+        <div id="divAbout" style="display: none;">
+            <center>
+                <h2>אודותינו</h2>
+                <p>טיים פור צ'יינג' הינה חברה העוסקת בפתרונות מט"ח <a href="PermitReq.pdf">ברשיון מטעם משרד האוצר</a>.</p>
+                <p>החברה פועלת מעל 10 שנים ולה 7 סניפים המציעים שירות אמין ויחס אישי ללקוחות פרטיים ועסקיים.</p>
+                <p>השירות ניתן בעברית ובאנגלית ובחלק מהסניפים ברוסית.</p>
+
+                <div class="box">המרת מט"ח</div>
+                <div class="box">העברות כספים לחו"ל</div>
+                <div class="box">פריטת המחאות דולריות</div>
+                <div class="box">בדיקת ורישום שטרות</div>
+            </center>
+        </div>
+        <div id="divContact" style="display: none">
+            <h1>פרטי התקשרות</h1>
+            <p>
+                טלפון:
+                <a href="tel:08-6994792"> 08-6994792</a>
+            </p>
+            <p>
+                דואר אלקטרוני:
+                <a href="mailto:Tfchashmo@bezeqint.net ">Tfchashmo@bezeqint.net </a>
+            </p>
+
+        </div>
+    </div>
+    <div id="divFooter">
+
+        <center><p>כל הזכויות שמורות לי</p></center>
+    </div>
+
+    <!--here are the pages-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
